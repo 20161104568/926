@@ -11,15 +11,18 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var zyjX: UITextField!
-    
+    @IBOutlet weak var zyjY: UITextField!
+    @IBOutlet weak var zyjZ: UITextField!
     @IBAction func test(_ sender: Any) {
-        zyjX.text = "hello world"
+        zyjZ.text = zyjX.text!
+         +
+        zyjY.text!
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
 }
+
 
