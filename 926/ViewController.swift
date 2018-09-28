@@ -13,11 +13,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var zyjX: UITextField!
     @IBOutlet weak var zyjY: UITextField!
     @IBOutlet weak var zyjZ: UITextField!
+    @IBOutlet weak var zyjA: UITextField!
+    @IBOutlet weak var zyjB: UITextField!
+    @IBOutlet weak var zyjC: UITextField!
+    
     @IBAction func test(_ sender: Any) {
-        zyjZ.text = zyjX.text!
-         +
-        zyjY.text!
-        
+        zyjZ.text = "\(Int(zyjX.text!)! + Int(zyjY.text!)!)"
+    }
+    
+    @IBAction func test1(_ sender: Any) {
+        zyjA.text = "\(Int(zyjX.text!)! - Int(zyjY.text!)!)"
+    }
+    
+    @IBAction func test2(_ sender: Any) {
+        zyjB.text = "\(Int(zyjX.text!)! * Int(zyjY.text!)!)"
+    }
+    
+    @IBAction func test3(_ sender: Any) {
+        zyjC.text = "\(Float(zyjX.text!)! / Float(zyjY.text!)!)"
     }
     override func viewDidLoad() {
         super.viewDidLoad()
