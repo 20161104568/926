@@ -17,10 +17,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resetButton: UIButton!
     
-    var counter = 0.0
+    var counter = 0.0//定义计时器
     var timer = Timer()
-    var isPlaying = false
+    var isPlaying = false//检测计时器是否运行
     
+     //开始计时
     @IBAction func startTimer(_ sender: Any) {
         if(isPlaying) {
             return
@@ -32,14 +33,17 @@ class ViewController: UIViewController {
         isPlaying = true
     }
     
+    //暂停计时
     @IBAction func pauseTimer(_ sender: Any) {
         startButton.isEnabled = true
         pauseButton.isEnabled = false
         
-        timer.invalidate()
+        timer.invalidate()//停止计时
         isPlaying = false
     }
     
+    
+    //重置
     @IBAction func resetTimer(_ sender: Any) {
         startButton.isEnabled = true
         pauseButton.isEnabled = false
@@ -57,6 +61,7 @@ class ViewController: UIViewController {
         pauseButton.isEnabled = false
     }
     
+    //调用update开始计时
     @objc func UpdateTimer() {
         counter = counter + 0.1
         timeLabel.text = String(format: "%.1f", counter)
