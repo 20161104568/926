@@ -8,14 +8,19 @@
 import UIKit
 
 class ViewController: UIViewController {
- 
+    
     @IBOutlet weak var timeLabel: UILabel!
+    
     @IBOutlet weak var startButton: UIButton!
+    
     @IBOutlet weak var pauseButton: UIButton!
+    
     @IBOutlet weak var resetButton: UIButton!
+    
     var counter = 0.0
     var timer = Timer()
     var isPlaying = false
+    
     @IBAction func startTimer(_ sender: Any) {
         if(isPlaying) {
             return
@@ -26,6 +31,7 @@ class ViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
         isPlaying = true
     }
+    
     @IBAction func pauseTimer(_ sender: Any) {
         startButton.isEnabled = true
         pauseButton.isEnabled = false
@@ -33,6 +39,7 @@ class ViewController: UIViewController {
         timer.invalidate()
         isPlaying = false
     }
+    
     @IBAction func resetTimer(_ sender: Any) {
         startButton.isEnabled = true
         pauseButton.isEnabled = false
@@ -42,6 +49,7 @@ class ViewController: UIViewController {
         counter = 0.0
         timeLabel.text = String(counter)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,6 +61,7 @@ class ViewController: UIViewController {
         counter = counter + 0.1
         timeLabel.text = String(format: "%.1f", counter)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -60,4 +69,3 @@ class ViewController: UIViewController {
     
     
 }
-

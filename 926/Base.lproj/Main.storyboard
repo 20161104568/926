@@ -17,47 +17,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="82Q-y1-j1Y">
-                                <rect key="frame" x="100" y="100" width="171" height="324"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYb-Lo-UiW">
-                                        <rect key="frame" x="0.0" y="0.0" width="171" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOW-my-VRJ">
-                                        <rect key="frame" x="0.0" y="20.5" width="171" height="243.5"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <state key="normal" title="start">
-                                            <color key="titleColor" red="0.20454532759999999" green="1" blue="0.93286010159999999" alpha="0.75296982020000003" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hDL-Ux-SuL"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oge-yQ-1j3">
-                                        <rect key="frame" x="0.0" y="264" width="171" height="30"/>
-                                        <state key="normal" title="reset">
-                                            <color key="titleColor" red="0.20454532759999999" green="1" blue="0.93286010159999999" alpha="0.75296982020000003" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="resetTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aXe-Y5-Auu"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLi-k4-nvQ">
-                                        <rect key="frame" x="0.0" y="294" width="171" height="30"/>
-                                        <state key="normal" title="pause">
-                                            <color key="titleColor" red="0.20454532759999999" green="1" blue="0.93286010159999999" alpha="0.75296982020000003" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pauseTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YKX-nR-Hpe"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3g-Gh-2G2">
+                                <rect key="frame" x="137" y="260" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="暂停">
+                                    <color key="titleColor" red="0.20454532759999999" green="1" blue="0.93286010159999999" alpha="0.75296982020000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KNl-tM-qbK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLm-Ea-36A">
+                                <rect key="frame" x="164" y="138" width="199" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4v-Nz-V8C">
+                                <rect key="frame" x="137" y="189" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="开始">
+                                    <color key="titleColor" red="0.20454532759999999" green="1" blue="0.93286010159999999" alpha="0.75296982020000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0pL-JU-d2H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6J-Np-2eB">
+                                <rect key="frame" x="137" y="333" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="重置">
+                                    <color key="titleColor" red="0.20454532759999999" green="1" blue="0.93286010159999999" alpha="0.75296982020000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VGc-L6-y15"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RGD-kw-5DR">
+                                <rect key="frame" x="95" y="73" width="150" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110.5" id="Db7-RG-pFx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="E66-uI-asM"/>
+                                    <constraint firstAttribute="width" constant="46" id="JJV-zT-Pdc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="400" id="c2E-ew-2fv"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -66,26 +76,20 @@
                             <accessibilityTraits key="traits" staticText="YES"/>
                         </accessibility>
                         <constraints>
-                            <constraint firstItem="82Q-y1-j1Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="CEf-YF-6Zz"/>
-                            <constraint firstItem="82Q-y1-j1Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gzq-Lc-hwW"/>
-                            <constraint firstItem="82Q-y1-j1Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="IMU-QH-qmm"/>
-                            <constraint firstItem="82Q-y1-j1Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LCW-5D-S2C"/>
-                            <constraint firstItem="82Q-y1-j1Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="a9a-ai-Gvw"/>
-                            <constraint firstItem="82Q-y1-j1Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mKS-zb-7wW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="82Q-y1-j1Y" secondAttribute="bottom" constant="264" id="pwC-gy-WGA"/>
+                            <constraint firstItem="RGD-kw-5DR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TAT-P7-ltm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="pauseButton" destination="nLi-k4-nvQ" id="pYG-Z1-KsY"/>
-                        <outlet property="resetButton" destination="oge-yQ-1j3" id="6hB-Bh-gdK"/>
-                        <outlet property="startButton" destination="fOW-my-VRJ" id="G5V-7M-lku"/>
-                        <outlet property="timeLabel" destination="QYb-Lo-UiW" id="Xa9-5f-g1j"/>
+                        <outlet property="pauseButton" destination="X3g-Gh-2G2" id="UiN-JS-V92"/>
+                        <outlet property="resetButton" destination="m6J-Np-2eB" id="NKX-7e-Bm6"/>
+                        <outlet property="startButton" destination="r4v-Nz-V8C" id="CAs-1k-H5M"/>
+                        <outlet property="timeLabel" destination="YLm-Ea-36A" id="RWb-Mh-GJV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-546.39999999999998" y="-520.38980509745136"/>
+            <point key="canvasLocation" x="-151.19999999999999" y="-615.74212893553226"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.20454532764136135" green="1" blue="0.93286010158854871" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
